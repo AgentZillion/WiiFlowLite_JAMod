@@ -616,7 +616,7 @@ int CMenu::main(void)
 				}
 				else
 				{
-					_game(BTN_B_HELD);
+					_game(BTN_B_HELD || m_cfg.getBool("GENERAL", "direct_launch", false));
 					if(m_exit)
 						break;
 					if(BTN_B_HELD)
